@@ -1,0 +1,10 @@
+@use "./variables" as *;
+
+@font-face {
+  font-family: ElMessiri;
+  src: url('../fonts/ElMessiri-Regular.ttf');
+}
+
+body {
+  font-family: ElMessiri;
+}
