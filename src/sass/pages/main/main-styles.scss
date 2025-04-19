@@ -1,0 +1,305 @@
+@font-face {
+  font-family: ElMessiri;
+  src: url('../fonts/ElMessiri-Regular.ttf');
+}
+
+body {
+  font-family: ElMessiri;
+}
+
+.navbar {
+  background-color: $linen;
+  border-bottom: 2px solid $dark-blue;
+
+  .navbar-toggler {
+    color: $oxford-blue !important;
+    font-size: 24px;
+    border: 2px solid transparent;
+
+    &:focus {
+      box-shadow: none;
+      border: 2px solid $oxford-blue;
+    }
+  }
+
+  &-brand {
+    svg {
+      width: 40px;
+      margin-left: 5px;
+      fill: $oxford-blue;
+    }
+
+    .brand-name {
+      color: $oxford-blue;
+      font-weight: 600;
+    }
+  }
+
+  .nav-item {
+    &.active {
+      a {
+        background-color: $oxford-blue;
+        color: $linen;
+      }
+    }
+  }
+
+  .nav-link {
+    font-size: 20px;
+    margin-left: 15px;
+    border-radius: 10px;
+    font-weight: 500;
+    color: $oxford-blue;
+    transition: all .5s ease;
+
+    &:hover {
+      background-color: $oxford-blue;
+      color: $linen;
+    }
+
+  }
+
+  .login-btn {
+    padding: 8px;
+    width: auto;
+    display: flex;
+    align-items: center;
+  }
+}
+
+section {
+  &.introduction {
+    height: calc(100vh - 66px);
+    padding-top: 66px;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100vh;
+      background-color: rgba($color: $oxford-blue, $alpha: 0.6);
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+    }
+
+    & p {
+      position: absolute;
+      z-index: 2;
+      color: $linen;
+      font-size: 28px;
+      text-align: center;
+      padding: 0 100px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    & img {
+      width: 100%;
+      height: calc(100vh - 66px);
+    }
+  }
+
+  &.services {
+    height: 100vh;
+    padding: 100px 0 0;
+    background-color: $baby-blue;
+    color: $dark-blue;
+
+    .services-icon {
+      color: $dark-blue;
+      margin-bottom: 0;
+    }
+
+    h3 {
+      font-weight: bold;
+      margin-top: 0;
+    }
+
+    p {
+      padding: 5px 50px;
+      font-size: 16px;
+    }
+  }
+
+  &.tours {
+    height: 100vh;
+    padding: 100px 0 50px;
+    background-image: linear-gradient(90deg, $dark-blue, $prussian-blue);
+
+    .card {
+      max-width: 25rem;
+      margin: auto;
+      background-color: $linen;
+      color: $dark-blue;
+
+      &-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+
+      &-text {
+        padding: 0 20%;
+        text-align: justify;
+
+        .price {
+          font-weight: bold;
+          color: $dolar-color;
+        }
+      }
+
+      .button {
+        @include button($dark-blue, $linen);
+        font-size: 16px;
+        padding: 10px;
+      }
+
+    }
+  }
+
+  &.contact {
+    padding: 100px 0 50px;
+    background-color: $baby-blue;
+    color: $dark-blue;
+
+    .contact {
+      &-ways {
+        list-style: none;
+        padding: 0;
+
+        .way {
+          margin-bottom: 5px;
+          font-size: 18px;
+
+        }
+      }
+
+      &-title {
+        position: relative;
+        padding-bottom: 4px;
+        margin-bottom: 20px;
+
+        &::after {
+          content: '';
+          width: 50px;
+          height: 5px;
+          background-color: $dark-blue;
+          border-radius: 2px;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+
+  }
+}
+
+footer {
+  background-color: $dark-blue;
+  color: $linen;
+}
+
+@media (max-width: 992px) {
+  section {
+    &.services {
+      p {
+        font-size: 14px;
+        padding: 5px 0;
+      }
+    }
+
+    &.tours {
+      height: auto;
+    }
+
+    &.contact {
+      .contact {
+        &-ways {
+          .way {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .nav-link {
+    padding: 5px;
+    margin-top: 5px;
+  }
+
+  .nav-item,
+  .login-btn {
+    width: fit-content !important;
+    margin: auto !important;
+  }
+}
+
+@media (max-width: 769px) {
+  section {
+    &.tours {
+      .card {
+        &-title {
+          font-size: 15px;
+        }
+
+        &-text {
+          font-size: 14px;
+        }
+
+        .button {
+          font-size: 14px;
+          padding: 8px;
+        }
+      }
+    }
+
+    &.contact {
+      padding: 50px 0 25px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  section {
+    &.introduction p {
+      font-size: 20px;
+    }
+
+    &.services {
+      height: auto;
+
+      p {
+        padding: 5px 25px;
+      }
+    }
+
+    &.tours {
+      .card {
+        margin-top: 25px;
+      }
+    }
+
+    &.contact {
+      .contact {
+        &-ways {
+          margin-top: 25px;
+        }
+      }
+    }
+
+
+  }
+}
+
+@media (max-width: 426px) {
+  section {
+    &.introduction p {
+      font-size: 18px;
+      padding: 0 25px;
+    }
+  }
+}

@@ -1,0 +1,189 @@
+@import '../../global-variables/variables';
+@import '../istanbul/turkey-tour-variables.scss';
+
+.tour-info {
+  height: auto;
+  padding-bottom: 50px;
+  position: relative;
+  padding-top: 100px;
+  color: $turkey-font-color;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    background-color: rgba($color: $turkey-header-layer, $alpha: 0.75);
+    z-index: -1;
+  }
+
+  .tour-bg-img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+
+  }
+
+  .tour-title {
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 35px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 15%;
+      height: 5px;
+      border-radius: 3px;
+      background-color: $turkey-font-color;
+      bottom: 0;
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+
+  .tour-description {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+
+}
+
+.tour-gellary {
+  color: $turkey-font-color !important;
+
+  .gellary {
+    h2 {
+      position: relative;
+      padding-bottom: 10px;
+      width: fit-content;
+      margin: auto auto 25px;
+      color: $black;
+
+
+      &::after {
+        content: '';
+        width: 100%;
+        height: 3px;
+        border-radius: 3px;
+        background-color: $black;
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        transform: translateX(50%);
+      }
+    }
+
+    .gellary-img {
+      border-radius: 5px;
+      width: 100%;
+      height: -webkit-fill-available;
+      max-height: 200px;
+      cursor: pointer;
+      transition: all 0.5s ease;
+
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 5px 20px rgba($color: $turkey-font-color, $alpha: 0.7);
+      }
+    }
+  }
+
+}
+
+.layer {
+  position: fixed;
+  overflow-y: auto;
+  top: -100%;
+  left: 0;
+  background-color: rgba($color: $turkey-layer-bg, $alpha: 0.9);
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+  padding: 70px 20px 50px;
+  transition: all 0.5s ease;
+
+  .layer-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1170px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+
+    .layer-btn {
+      position: absolute;
+      font-size: 35px;
+      right: 0;
+      top: -50px;
+      margin: auto;
+      color: $turkey-closeLayer-btn-color;
+      width: max-content;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: darken($color: $turkey-closeLayer-btn-color, $amount: 40%);
+      }
+    }
+
+    .layer-img {
+      margin: auto;
+      max-width: 650px;
+      object-fit: fill;
+      width: -webkit-fill-available;
+      height: auto;
+      max-height: 400px;
+    }
+  }
+}
+
+.layer-show {
+  top: 0% !important;
+}
+
+
+@media (max-width: 576px) {
+  ol {
+    li {
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .tour-info {
+    .tour-title {
+      font-size: 24px;
+    }
+
+    .tour-description {
+      font-size: 18px;
+    }
+  }
+
+  .tour-gellary {
+    .gellary h2 {
+      font-size: 18px;
+    }
+  }
+
+  .tour-gellary {
+    .gellary {
+      .gellary-img {
+        max-height: 250px;
+        width: auto;
+        max-width: 350px;
+      }
+    }
+  }
+
+}
