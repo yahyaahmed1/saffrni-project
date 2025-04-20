@@ -141,9 +141,6 @@ section {
       }
 
       &-text {
-        padding: 0 20%;
-        text-align: justify;
-
         .price {
           font-weight: bold;
           color: $dolar-color;
@@ -201,6 +198,81 @@ footer {
   background-color: $dark-blue;
   color: $linen;
 }
+
+// Login Page Styles
+// ----------------------------------
+
+.login-page-content {
+  height: calc(100vh - 40px);
+  padding-top: 65px;
+
+  .bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    padding-top: 65px;
+    z-index: -1;
+  }
+
+  .form-holder {
+    margin-top: 15px;
+    width: max-content;
+    padding: 25px;
+    border-radius: 15px;
+    color: $white;
+    background-color: rgba($color: $dark-blue, $alpha: 0.8);
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+
+    .form-control:focus {
+      box-shadow: 0 0 0 2px $bondi-blue;
+    }
+
+    .btns {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .button {
+      @include button($white, $dark-blue);
+      font-size: 16px;
+      padding: 5px 10px;
+    }
+
+    .forget-pass-btn,
+    .have-account {
+      text-decoration: none;
+      color: $white;
+
+      &:hover {
+        color: $linen;
+        text-decoration: underline;
+      }
+    }
+
+    .signup-p {
+      a {
+        text-decoration: none;
+        color: $white;
+        font-weight: bold;
+
+        &:hover {
+          text-decoration: underline;
+          color: $linen;
+        }
+      }
+    }
+  }
+
+}
+
+
+// Media Queries
 
 @media (max-width: 992px) {
   section {
@@ -261,6 +333,7 @@ footer {
       padding: 50px 0 25px;
     }
   }
+
 }
 
 @media (max-width: 576px) {
@@ -292,6 +365,34 @@ footer {
     }
 
 
+  }
+
+  // login & signup page
+  .login-page-content {
+    .form-holder {
+      width: 350px;
+
+      label {
+        font-size: 14px;
+      }
+
+      .form-control {
+        height: 30px;
+      }
+
+      .button {
+        font-size: 14px;
+      }
+
+      .forget-pass-btn,
+      .have-account {
+        font-size: 14px;
+      }
+
+      .signup-p {
+        font-size: 14px;
+      }
+    }
   }
 }
 

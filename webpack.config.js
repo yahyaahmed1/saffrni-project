@@ -110,6 +110,16 @@ module.exports = {
       template: 'src/turkey-tour.html',
       chunks: ['index', 'scripts/gellary', 'style/turkey']
     }),
+    new HtmlWebpackPlugin({
+      filename: 'login.html',
+      template: 'src/login.html',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'signup.html',
+      template: 'src/signup.html',
+      chunks: ['index']
+    }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
     }),

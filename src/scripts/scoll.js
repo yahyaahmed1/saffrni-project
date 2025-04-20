@@ -20,7 +20,6 @@ $(function () {
     if (scrollPosition >= services) {
       servicesNav.siblings().removeClass("active");
       servicesNav.addClass("active");
-      console.log(services);
 
     } else if (scrollPosition < services) {
       servicesNav.removeClass("active");
@@ -30,7 +29,7 @@ $(function () {
       toursNav.addClass("active");
 
     }
-    if (scrollPosition >= contact - 200) {
+    if (scrollPosition >= contact - 300) {
       contactNav.siblings().removeClass("active");
       contactNav.addClass("active");
     }
