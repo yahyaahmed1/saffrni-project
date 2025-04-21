@@ -25,10 +25,10 @@
     </nav>
   </header>
   <main class="login-page-content">
-    <img class="bg-img" src="./images/map.svg" alt="bg">
+    <img class="bg-img" src="./images/world-map.svg" alt="bg">
     <div class="container">
       <div class="form-holder">
-        <form action="#" class="login-form m-auto">
+        <form action="#" class="login-form m-auto" id="signup">
           <div class="mb-3 row">
             <div class="col">
               <label for="username" class="form-label">الأسم</label>
@@ -47,15 +47,35 @@
             <div class="col-lg-12 mb-lg-3 col">
               <label for="Password" class="form-label">كلمة المرور</label>
               <input required type="password" dir="auto" class="form-control" id="Password">
+              <div class="show-pass d-flex">
+                <input class="me-1" type="checkbox" id="showPass"><label for="showPass">اظهار كلمة المرور</label>
+              </div>
             </div>
             <div class="col-lg-12 col">
               <label for="verifyPassword" class="form-label">تأكيد كلمة المرور</label>
               <input required type="password" dir="auto" class="form-control" id="verifyPassword">
+              <div class="notEqualPassword">
+                <span>كلمة المرور غير متطابقة</span>
+              </div>
             </div>
           </div>
           <div class="btns">
-            <button type="submit" class="button btn me-5">
-              إنشاء حساب جديد
+            <button id="submitBtn" type="submit" class="button btn me-5">
+              <span class="text">إنشاء حساب جديد</span>
+              <span class="icon-Container">
+                <svg width="16" height="19" viewBox="0 0 16 19" fill="nones" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="1.61321" cy="1.61321" r="1.5" fill="#0D2149"></circle>
+                  <circle cx="5.73583" cy="1.61321" r="1.5" fill="#0D2149"></circle>
+                  <circle cx="5.73583" cy="5.5566" r="1.5" fill="#0D2149"></circle>
+                  <circle cx="9.85851" cy="5.5566" r="1.5" fill="#0D2149"></circle>
+                  <circle cx="9.85851" cy="9.5" r="1.5" fill="#0D2149"></circle>
+                  <circle cx="13.9811" cy="9.5" r="1.5" fill="#0D2149"></circle>
+                  <circle cx="5.73583" cy="13.4434" r="1.5" fill="#0D2149"></circle>
+                  <circle cx="9.85851" cy="13.4434" r="1.5" fill="#0D2149"></circle>
+                  <circle cx="1.61321" cy="17.3868" r="1.5" fill="#0D2149"></circle>
+                  <circle cx="5.73583" cy="17.3868" r="1.5" fill="#0D2149"></circle>
+                </svg>
+              </span>
             </button>
             <a href='./login.html' class="have-account">هل لديك حساب؟</a>
           </div>

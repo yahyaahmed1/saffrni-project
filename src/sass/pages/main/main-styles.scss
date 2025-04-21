@@ -7,6 +7,10 @@ body {
   font-family: ElMessiri;
 }
 
+#showPass+label {
+  font-size: 12px;
+}
+
 .navbar {
   background-color: $linen;
   border-bottom: 2px solid $dark-blue;
@@ -106,6 +110,8 @@ section {
     padding: 100px 0 0;
     background-color: $baby-blue;
     color: $dark-blue;
+    display: flex;
+    align-items: center;
 
     .services-icon {
       color: $dark-blue;
@@ -228,8 +234,20 @@ footer {
     top: 50%;
     transform: translate(50%, -50%);
 
-    .form-control:focus {
-      box-shadow: 0 0 0 2px $bondi-blue;
+    .notEqualPassword {
+      font-size: 12px;
+      color: rgb(255, 34, 0);
+      opacity: 0;
+    }
+
+    .form-control {
+      border: 2px dotted transparent;
+
+
+      &:focus {
+        box-shadow: none;
+        border: 2px dotted $bondi-blue;
+      }
     }
 
     .btns {
@@ -239,7 +257,7 @@ footer {
     }
 
     .button {
-      @include button($white, $dark-blue);
+      @include registry-btn($baby-blue, $dark-blue);
       font-size: 16px;
       padding: 5px 10px;
     }
@@ -268,11 +286,43 @@ footer {
       }
     }
   }
-
 }
 
 
 // Media Queries
+@media (max-width: 1024px) {
+  section {
+    &.introduction {
+      height: auto;
+
+      &::before {
+        height: 100%;
+      }
+
+      img {
+        height: 100%;
+      }
+
+    }
+
+
+    &.services {
+      height: auto;
+      padding: 50px 0;
+
+      p {
+        padding: 5px 25px;
+      }
+    }
+
+    &.tours {
+      height: auto;
+      padding: 50px 0;
+    }
+  }
+
+}
+
 
 @media (max-width: 992px) {
   section {
@@ -342,13 +392,6 @@ footer {
       font-size: 20px;
     }
 
-    &.services {
-      height: auto;
-
-      p {
-        padding: 5px 25px;
-      }
-    }
 
     &.tours {
       .card {
@@ -381,7 +424,8 @@ footer {
       }
 
       .button {
-        font-size: 14px;
+        font-size: 12px;
+        padding: 7px;
       }
 
       .forget-pass-btn,

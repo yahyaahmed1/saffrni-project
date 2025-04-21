@@ -17,19 +17,19 @@ $(function () {
       toursNav = $("#tours-nav"),
       contactNav = $("#contact-nav");
     //if the scroll position is the same as the position of the container specified, add the "active" class to the corresponding nav element
-    if (scrollPosition >= services) {
+    if (scrollPosition >= services - 100) {
       servicesNav.siblings().removeClass("active");
       servicesNav.addClass("active");
 
     } else if (scrollPosition < services) {
       servicesNav.removeClass("active");
     }
-    if (scrollPosition >= tours - 100) {
+    if (scrollPosition >= tours - 200) {
       toursNav.siblings().removeClass("active");
       toursNav.addClass("active");
 
     }
-    if (scrollPosition >= contact - 300) {
+    if (scrollPosition >= contact - 400) {
       contactNav.siblings().removeClass("active");
       contactNav.addClass("active");
     }
