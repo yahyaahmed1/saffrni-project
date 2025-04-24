@@ -1,13 +1,13 @@
 window.bootstrap = require('../node_modules/bootstrap/dist/js/bootstrap.bundle.js');
 import "bootstrap/scss/bootstrap.scss"
 import "@fortawesome/fontawesome-free/js/all.min"
-
 import './sass/index.scss';
 
 // for displaying date in footer
 document.getElementById('fullyear').innerText = new Date().getFullYear()
 
 // for toggling password visibility
+let showPass = document.getElementById("showPass");
 function myFunction() {
   var p = document.getElementById("Password");
   let v = document.getElementById("verifyPassword");;
@@ -24,7 +24,9 @@ function myFunction() {
     }
   }
 }
-document.getElementById("showPass").addEventListener("click", myFunction);
+if (showPass != null) {
+  showPass.addEventListener("click", myFunction);
+}
 
 // for making sure that password fields are the same 
 var confpass = document.getElementById("verifyPassword")

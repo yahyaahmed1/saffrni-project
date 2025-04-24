@@ -15,4 +15,3 @@ for (let i = 0; i < projectImageLength; i++) {
     layer.classList.add("layer-show")
   })
 }
-console.log(layerClose);

@@ -1,5 +1,6 @@
-@import '../../global-variables/variables';
-@import '../istanbul/turkey-tour-variables.scss';
+@use '../../global-variables/variables' as *;
+@use '../istanbul/turkey-tour-variables.scss' as *;
+@use "sass:color";
 
 .tour-info {
   height: auto;
@@ -131,7 +132,7 @@
       transition: all 0.3s ease;
 
       &:hover {
-        color: darken($color: $turkey-closeLayer-btn-color, $amount: 40%);
+        color: color.adjust($turkey-closeLayer-btn-color, $lightness: -40%);
       }
     }
 

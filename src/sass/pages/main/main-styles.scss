@@ -236,7 +236,7 @@ footer {
 
     .notEqualPassword {
       font-size: 12px;
-      color: rgb(255, 34, 0);
+      color: $error-color;
       opacity: 0;
     }
 
@@ -257,9 +257,9 @@ footer {
     }
 
     .button {
-      @include registry-btn($baby-blue, $dark-blue);
       font-size: 16px;
       padding: 5px 10px;
+      @include registry-btn($baby-blue, $dark-blue);
     }
 
     .forget-pass-btn,

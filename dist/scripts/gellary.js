@@ -144,7 +144,7 @@ eval("/** @typedef {\"info\" | \"warning\" | \"error\"} LogLevel */\n\n/** @type
   \********************************/
 /***/ (() => {
 
-eval("let projectImage = document.querySelectorAll(\".gellary-img\"),\r\n  projectImageLength = projectImage.length,\r\n  layer = document.querySelector(\".layer\"),\r\n  layerClose = document.querySelector(\".layer-btn\"),\r\n  layerImg = document.querySelector(\".layer-img\")\r\n\r\nlayerClose.addEventListener(\"click\", () => {\r\n  layer.classList.remove(\"layer-show\")\r\n})\r\n\r\nfor (let i = 0; i < projectImageLength; i++) {\r\n  projectImage[i].addEventListener(\"click\", () => {\r\n    let imgSrc = projectImage[i].getAttribute(\"src\");\r\n    layerImg.setAttribute(\"src\", imgSrc)\r\n    layer.classList.add(\"layer-show\")\r\n  })\r\n}\r\nconsole.log(layerClose);\r\n\n\n//# sourceURL=webpack://saffrni-project/./src/scripts/gellary.js?");
+eval("let projectImage = document.querySelectorAll(\".gellary-img\"),\r\n  projectImageLength = projectImage.length,\r\n  layer = document.querySelector(\".layer\"),\r\n  layerClose = document.querySelector(\".layer-btn\"),\r\n  layerImg = document.querySelector(\".layer-img\")\r\n\r\nlayerClose.addEventListener(\"click\", () => {\r\n  layer.classList.remove(\"layer-show\")\r\n})\r\n\r\nfor (let i = 0; i < projectImageLength; i++) {\r\n  projectImage[i].addEventListener(\"click\", () => {\r\n    let imgSrc = projectImage[i].getAttribute(\"src\");\r\n    layerImg.setAttribute(\"src\", imgSrc)\r\n    layer.classList.add(\"layer-show\")\r\n  })\r\n}\r\n\n\n//# sourceURL=webpack://saffrni-project/./src/scripts/gellary.js?");
 
 /***/ })
 
@@ -201,7 +201,7 @@ eval("let projectImage = document.querySelectorAll(\".gellary-img\"),\r\n  proje
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("6be18161472fccbcb2b2")
+/******/ 		__webpack_require__.h = () => ("9ef82743322f6cc8af0f")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
